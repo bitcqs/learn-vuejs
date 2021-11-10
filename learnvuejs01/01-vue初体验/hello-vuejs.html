@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+
+<body>
+
+    <div id='app'>
+        <h1>{{name}}</h1>
+        <h2>{{message}}</h2>
+    </div>
+
+    <script src="../js/vue.js"></script>
+    <script>
+        //let(变量) const(常量)
+        const app = new Vue({
+            el: '#app',
+            data: {
+                message: 'hello',
+                name: "cqs"
+            }
+        });
+    </script>
+</body>
+
+</html>
