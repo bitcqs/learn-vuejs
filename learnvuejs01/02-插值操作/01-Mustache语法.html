@@ -13,6 +13,7 @@
         <h2>{{message}}</h2>
         <h2>{{message}}, cqs</h2>
         <h2>{{firstName+lastName}}</h2>
+        <h2>{{counter * 2}}</h2>
     </div>
     <script src="../js/vue.js"></script>
     <script>
@@ -21,7 +22,8 @@
             data: {
                 message: "hello",
                 firstName: "kobe",
-                lastName: "bryant"
+                lastName: "bryant",
+                counter: 100
             }
         });
     </script>
