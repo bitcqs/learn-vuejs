@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(item) in letters">{{item}}</li>
+        </ul>
+        <button @click="btnClick">push</button>
+        <button @click="btnClick1">pop</button>
+        <button @click="btnClick3">shift</button>
+        <button @click="btnClick4">unshift</button>
+        <button @click="btnClick5">splice</button>
+        <button @click="btnClick6">sort</button>
+        <button @click="btnClick7">reverse</button>
+        <button @click="btnClick2">changeValueByIndex</button>
+    </div>
+    <script src="../js/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                letters: ['a', 'b', 'c'],
+            },
+            methods: {
+                btnClick() {
+                    this.letters.push('aa')
+                },
+                btnClick1() {
+                    this.letters.pop()
+                },
+                btnClick2() {
+                    this.letters[0] = 'aa'
+                },
+                btnClick3() {
+                    this.letters.shift()
+                },
+                btnClick4() {
+                    this.letters.unshift('00')
+                },
+                btnClick5() {
+                    this.letters.splice(1, 2, '11', '22', '333')
+                },
+                btnClick6() {
+                    this.letters.sort()
+                },
+                btnClick7() {
+                    this.letters.reverse()
+                },
+                mycompare(a, b) {
+                    return a > b
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
